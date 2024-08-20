@@ -22,7 +22,6 @@ app.get("/numbers/:type", async (req, res) => {
     return res.status(400).json({ error: "Invalid type" });
   }
 
-  // Hardcoded responses
   if (numbersWindow.length === 0) {
     numbersWindow = [2, 4, 6, 8];
     const avg = calculateAverage(numbersWindow);
